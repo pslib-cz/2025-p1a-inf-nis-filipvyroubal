@@ -1,6 +1,21 @@
 # Software pro hledání studentské brigády a praxe ve firmách
-Role,Základní funkce,Pokročilé / Specifické funkce,Přínos role v systému
-Student,"• Registrace a tvorba profilu (CV, dovednosti, škola)• Vyhledávání a filtrace nabídek (obor, lokalita, odměna, typ úvazku)• Reakce na nabídky (odeslání profilu a průvodního dopisu)• Notifikace o stavu výběrového řízení",• Automatické párování nabídek na základě dovedností (AI doporučování)• Generování deníku praxe pro školu• Hodnocení firem po skončení brigády/praxe• Sledování historie výdělků a odpracovaných hodin,"Hledá relevantní pracovní zkušenosti nebo přivýdělek, buduje si kariérní portfolio."
-Firma / Zaměstnavatel,"• Registrace firmy a správa firemního profilu• Inzerce pozic (vytváření, úprava a mazání nabídek brigád/praxí)• Správa uchazečů (přijetí, zamítnutí, pozvání na pohovor)• Přímá komunikace se studenty přes interní chat",• Filtrování a vyhledávání v databázi studentských profilů (Talent Pool)• Šablony pro hodnocení studentů a potvrzení o absolvování praxe• Statistiky úspěšnosti inzerátů a správa rozpočtu na topování nabídek,"Hledá flexibilní pracovní sílu, budoucí talentované zaměstnance a plní kvóty pro studentské praxe."
-Škola / Koordinátor praxí,• Schvalování firem jako oficiálních partnerů školy• Sledování studentů na povinných praxích (přehled o docházce a plnění plánu)• Komunikace s garantem praxe na straně firmy,• Elektronické podepisování trojstranných dohod (Škola-Student-Firma)• Exporty dat a reporty o uplatnění studentů pro potřeby akreditací• Hromadné importy studentů do systému,"Zajišťuje legislativní a formální rámec povinných praxí, kontroluje kvalitu poskytované praxe."
-Administrátor (Systém),"• Kompletní správa uživatelů (blokování, ověřování identit firem)• Správa kategorií, oborů, štítků a filtrů• Řešení reportů a stížností (podvody, nevhodný obsah)• Nastavení a monitoring systému","• Správa platební brány a fakturace (za prémiové inzeráty firem)• Analytika platformy (grafy návštěvnosti, úspěšnost propojení)• Nastavení automatických e-mailových kampaní a push notifikací","Dohlíží na bezpečnost, technický chod platformy, monetizaci a čistotu dat."
+### 1. Student
+* **Hlavní funkce:**
+  * Vytvoření profilu (nahrání CV, obor, dovednosti).
+  * Vyhledávání a filtrace brigád/praxí (podle lokality, odměny, oboru).
+  * Rychlá reakce na inzerát (odeslání profilu jedním kliknutím) a interní chat s firmou.
+* **Přínos:** Hledá přivýdělek a praxi při studiu, vyžaduje rychlé a jednoduché ovládání.
+
+### 2. Firma
+* **Hlavní funkce:**
+  * Správa firemního profilu a vkládání inzerátů (popis pozice, odměna, požadavky).
+  * Správa uchazečů (přehled reagujících studentů, změna stavu na přijat/zamítnut).
+  * Interní chat se studenty a možnost stáhnutí jejich životopisů.
+* **Přínos:** Získává flexibilní výpomoc do projektů a budoucí juniorní talenty.
+
+### 3. Administrátor
+* **Hlavní funkce:**
+  * Schvalování a ověřování nových firem (prevence podvodných inzerátů).
+  * Správa uživatelských účtů (blokování uživatelů, mazání nevhodného obsahu).
+  * Sledování základních statistik platformy (počet aktivních uživatelů a úspěšných propojení).
+* **Přínos:** Zajišťuje bezpečnost, důvěryhodnost a technický chod celé platformy.

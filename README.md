@@ -19,3 +19,4 @@
   * Správa uživatelských účtů (blokování uživatelů, mazání nevhodného obsahu).
   * Sledování základních statistik platformy (počet aktivních uživatelů a úspěšných propojení).
 * **Přínos:** Zajišťuje bezpečnost, důvěryhodnost a technický chod celé platformy.
+## Funkční požadavky

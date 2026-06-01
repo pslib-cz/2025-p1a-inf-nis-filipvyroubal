@@ -1,0 +1,31 @@
+@startuml deployment_diagram
+left to right direction
+
+node "Uživatelův prohlížeč" as Browser {
+}
+
+node "Load Balancer / Reverse Proxy" as Proxy {
+}
+
+node "Aplikační server" as AppServer {
+  component "Frontend" as Frontend
+  component "Backend API" as Backend
+}
+
+database "Relační databáze" as Database
+
+node "Storage" as FileStore {
+  artifact "CV soubory" as CVStorage
+}
+
+node "E-mailová služba" as EmailService
+node "Monitoring" as Monitoring
+
+Browser --> Proxy : HTTP/HTTPS
+Proxy --> Frontend : HTML/CSS/JS
+Proxy --> Backend : REST/GraphQL
+Backend --> Database : SQL
+Backend --> CVStorage : Ukládání / čtení souborů
+Backend --> EmailService : Notifikace / e-mail
+Backend --> Monitoring : Metriky / logy
+@enduml

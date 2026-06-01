@@ -1,0 +1,25 @@
+@startuml role_diagram
+left to right direction
+
+actor Student
+actor "Firma / Recruiter" as Company
+actor Administrátor
+actor Systém
+
+Student --> (Vyhledávání brigád a praxí)
+Student --> (Odeslání reakce na inzerát)
+Student --> (Správa životopisu)
+
+Company --> (Publikace inzerátu)
+Company --> (Správa žádostí studentů)
+Company --> (Komunikace se studenty)
+
+Administrátor --> (Schvalování firem)
+Administrátor --> (Správa uživatelských účtů)
+Administrátor --> (Monitoring platformy)
+
+Systém --> (Odesílání notifikací)
+Systém --> (Zálohování dat)
+Systém --> (Autentizace a autorizace)
+
+@enduml

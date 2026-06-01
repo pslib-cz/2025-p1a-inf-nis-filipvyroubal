@@ -1,0 +1,76 @@
+@startuml er_diagram
+hide circle
+skinparam linetype ortho
+
+entity "Student" as Student {
+  *student_id : PK
+  *name
+  *email
+  *school
+  *field_of_study
+  *skills
+  *languages
+  *availability
+}
+
+entity "Firma" as Company {
+  *company_id : PK
+  *name
+  *website
+  *description
+  *address
+  *approved : bool
+}
+
+entity "Inzerát" as JobOffer {
+  *offer_id : PK
+  *company_id : FK
+  *title
+  *industry
+  *employment_type
+  *salary
+  *location
+  *description
+  *status
+}
+
+entity "CV" as CurriculumVitae {
+  *cv_id : PK
+  *student_id : FK
+  *file_path
+  *uploaded_at
+}
+
+entity "Reakce" as Application {
+  *application_id : PK
+  *student_id : FK
+  *offer_id : FK
+  *message
+  *status
+  *submitted_at
+}
+
+entity "ChatMessage" as ChatMessage {
+  *message_id : PK
+  *application_id : FK
+  *sender_type
+  *message_text
+  *sent_at
+}
+
+entity "Administrátor" as Administrator {
+  *admin_id : PK
+  *name
+  *email
+}
+
+Student ||--o{ CurriculumVitae : uploads
+Student ||--o{ Application : applies
+Company ||--o{ JobOffer : posts
+JobOffer ||--o{ Application : receives
+Application ||--o{ ChatMessage : contains
+Company ||--o{ Application : reviews
+Administrator ||--o{ Company : approves
+Administrator ||--o{ JobOffer : moderates
+Administrator ||--o{ Student : manages
+@enduml

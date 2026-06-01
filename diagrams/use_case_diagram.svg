@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1040" viewBox="0 0 1000 1040">
+  <style>
+    .actor-text { font: bold 16px sans-serif; fill: #222; }
+    .usecase-text { font: 14px sans-serif; fill: #222; }
+    .package-title { font: bold 16px sans-serif; fill: #0b3861; }
+    .actor-line { stroke: #333; stroke-width: 2; }
+    .usecase-shape { fill: #f8fafc; stroke: #39739d; stroke-width: 2; }
+    .actor-shape { stroke: #333; stroke-width: 2; fill: none; }
+  </style>
+
+  <!-- Actors -->
+  <g id="actor-student">
+    <circle cx="120" cy="120" r="25" class="actor-shape" />
+    <line x1="120" y1="145" x2="120" y2="210" class="actor-line" />
+    <line x1="120" y1="170" x2="90" y2="210" class="actor-line" />
+    <line x1="120" y1="170" x2="150" y2="210" class="actor-line" />
+    <line x1="120" y1="210" x2="95" y2="265" class="actor-line" />
+    <line x1="120" y1="210" x2="145" y2="265" class="actor-line" />
+    <text x="120" y="290" text-anchor="middle" class="actor-text">Student</text>
+  </g>
+
+  <g id="actor-firma">
+    <circle cx="120" cy="420" r="25" class="actor-shape" />
+    <line x1="120" y1="445" x2="120" y2="530" class="actor-line" />
+    <line x1="120" y1="470" x2="90" y2="530" class="actor-line" />
+    <line x1="120" y1="470" x2="150" y2="530" class="actor-line" />
+    <line x1="120" y1="530" x2="95" y2="585" class="actor-line" />
+    <line x1="120" y1="530" x2="145" y2="585" class="actor-line" />
+    <text x="120" y="615" text-anchor="middle" class="actor-text">Firma</text>
+  </g>
+
+  <g id="actor-admin">
+    <circle cx="120" cy="760" r="25" class="actor-shape" />
+    <line x1="120" y1="785" x2="120" y2="850" class="actor-line" />
+    <line x1="120" y1="810" x2="90" y2="850" class="actor-line" />
+    <line x1="120" y1="810" x2="150" y2="850" class="actor-line" />
+    <line x1="120" y1="850" x2="95" y2="905" class="actor-line" />
+    <line x1="120" y1="850" x2="145" y2="905" class="actor-line" />
+    <text x="120" y="980" text-anchor="middle" class="actor-text">Administrátor</text>
+  </g>
+
+  <!-- Student package -->
+  <g id="package-student">
+    <rect x="240" y="40" width="700" height="340" rx="12" ry="12" fill="#e7f1fb" stroke="#0b3861" stroke-width="2" />
+    <text x="250" y="70" class="package-title">Student</text>
+    <ellipse cx="600" cy="110" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="116" text-anchor="middle" class="usecase-text">Vytvořit profil</text>
+    <line x1="145" y1="120" x2="410" y2="110" class="actor-line" />
+
+    <ellipse cx="600" cy="180" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="186" text-anchor="middle" class="usecase-text">Vyhledávat a filtrovat nabídky</text>
+    <line x1="145" y1="120" x2="410" y2="180" class="actor-line" />
+
+    <ellipse cx="600" cy="250" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="256" text-anchor="middle" class="usecase-text">Reagovat na nabídku</text>
+    <line x1="145" y1="120" x2="410" y2="250" class="actor-line" />
+
+    <ellipse cx="600" cy="320" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="326" text-anchor="middle" class="usecase-text">Chat s firmou</text>
+    <line x1="145" y1="120" x2="410" y2="320" class="actor-line" />
+  </g>
+
+  <!-- Firma package -->
+  <g id="package-firma">
+    <rect x="240" y="400" width="700" height="320" rx="12" ry="12" fill="#f3f7e3" stroke="#4a6a0d" stroke-width="2" />
+    <text x="250" y="430" class="package-title">Firma</text>
+    <ellipse cx="600" cy="470" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="476" text-anchor="middle" class="usecase-text">Spravovat profil firmy</text>
+    <line x1="145" y1="420" x2="410" y2="470" class="actor-line" />
+
+    <ellipse cx="600" cy="540" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="546" text-anchor="middle" class="usecase-text">Vkládat inzeráty</text>
+    <line x1="145" y1="420" x2="410" y2="540" class="actor-line" />
+
+    <ellipse cx="600" cy="610" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="616" text-anchor="middle" class="usecase-text">Spravovat uchazeče</text>
+    <line x1="145" y1="420" x2="410" y2="610" class="actor-line" />
+
+    <ellipse cx="600" cy="680" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="686" text-anchor="middle" class="usecase-text">Chat se studenty / Stahovat životopisy</text>
+    <line x1="145" y1="420" x2="410" y2="680" class="actor-line" />
+  </g>
+
+  <!-- Administrator package -->
+  <g id="package-admin">
+    <rect x="240" y="760" width="700" height="260" rx="12" ry="12" fill="#fbece5" stroke="#8a2f1f" stroke-width="2" />
+    <text x="250" y="790" class="package-title">Administrátor</text>
+    <ellipse cx="600" cy="810" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="816" text-anchor="middle" class="usecase-text">Schvalovat nové firmy</text>
+    <line x1="145" y1="760" x2="410" y2="810" class="actor-line" />
+
+    <ellipse cx="600" cy="880" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="886" text-anchor="middle" class="usecase-text">Spravovat uživatelské účty</text>
+    <line x1="145" y1="760" x2="410" y2="880" class="actor-line" />
+
+    <ellipse cx="600" cy="950" rx="190" ry="32" class="usecase-shape" />
+    <text x="600" y="956" text-anchor="middle" class="usecase-text">Sledovat statistiky platformy</text>
+    <line x1="145" y1="760" x2="410" y2="950" class="actor-line" />
+  </g>
+</svg>

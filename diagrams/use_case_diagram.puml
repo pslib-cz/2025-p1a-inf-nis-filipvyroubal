@@ -1,0 +1,44 @@
+@startuml usecase_diagram
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle stick
+
+actor Student
+actor Firma
+actor "Administrátor" as Admin
+
+package "Student" {
+  usecase "Vytvořit profil" as UC1
+  usecase "Vyhledávat a filtrovat nabídky" as UC2
+  usecase "Reagovat na nabídku" as UC3
+  usecase "Chat s firmou" as UC4
+}
+
+package "Firma" {
+  usecase "Spravovat profil firmy" as UC5
+  usecase "Vkládat inzeráty" as UC6
+  usecase "Spravovat uchazeče" as UC7
+  usecase "Chat se studenty" as UC8
+  usecase "Stahovat životopisy" as UC9
+}
+
+package "Administrátor" {
+  usecase "Schvalovat nové firmy" as UC10
+  usecase "Spravovat uživatelské účty" as UC11
+  usecase "Sledovat statistiky platformy" as UC12
+}
+
+Student --> UC1
+Student --> UC2
+Student --> UC3
+Student --> UC4
+Firma --> UC5
+Firma --> UC6
+Firma --> UC7
+Firma --> UC8
+Firma --> UC9
+Admin --> UC10
+Admin --> UC11
+Admin --> UC12
+
+@enduml

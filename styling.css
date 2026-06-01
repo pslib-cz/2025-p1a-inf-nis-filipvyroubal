@@ -1,0 +1,34 @@
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+body {
+  background-color: #ffffff;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 20px;
+}
+.articl{
+    background-color: #76fff4;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+ul {
+    text-align: left;
+    display: inline-block;
+}
+details {
+    display: block;
+    margin: 20px 50px;
+    background-color: #90ff7a;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    padding: 0px;
+}

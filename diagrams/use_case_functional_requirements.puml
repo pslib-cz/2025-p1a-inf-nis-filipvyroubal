@@ -1,0 +1,61 @@
+@startuml usecase_functional_requirements
+left to right direction
+skinparam actorStyle stick
+
+actor "Student" as Student
+actor "Firma" as Firma
+actor "Administrátor" as Admin
+
+usecase "Registrovat / přihlásit" as S1
+usecase "Vytvořit / upravit profil" as S2
+usecase "Nahrát CV (PDF)" as S3
+usecase "Vyhledat nabídky" as S4
+usecase "Filtrovat nabídky" as S5
+usecase "Uložit vyhledávání" as S6
+usecase "Reagovat na nabídku" as S7
+usecase "Zobrazit stav reakcí" as S8
+usecase "Chat s firmou" as S9
+usecase "Vymazat účet (GDPR)" as S10
+
+usecase "Registrovat / upravit profil firmy" as F1
+usecase "Vytvořit / publikovat inzerát" as F2
+usecase "Uložit koncept inzerátu" as F3
+usecase "Spravovat uchazeče" as F4
+usecase "Změnit stav uchazeče" as F5
+usecase "Stáhnout CV" as F6
+usecase "Chat se studenty" as F7
+
+usecase "Schvalovat firmy" as A1
+usecase "Spravovat uživatele" as A2
+usecase "Moderovat obsah" as A3
+usecase "Zobrazit statistiky" as A4
+
+Student --> S1
+Student --> S2
+Student --> S3
+Student --> S4
+Student --> S5
+Student --> S6
+Student --> S7
+Student --> S8
+Student --> S9
+Student --> S10
+
+Firma --> F1
+Firma --> F2
+Firma --> F3
+Firma --> F4
+Firma --> F5
+Firma --> F6
+Firma --> F7
+
+Admin --> A1
+Admin --> A2
+Admin --> A3
+Admin --> A4
+
+F2 ..> A1 : requires approval
+F4 ..> F6 : download CV
+F7 ..> S9 : chat with student
+
+@enduml

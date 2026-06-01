@@ -44,5 +44,133 @@
     </details>
     </article>
 
+    <article class="articl">
+        <header>
+            <h2>Nefunkční požadavky</h2>
+        </header>
+
+        <section>
+            <h3>Výkon a škálovatelnost</h3>
+            <ul>
+                <li><b>NF-PERF-01 – Odezva:</b> 90 % dotazů < 2 s při 1000 současných uživatelích.</li>
+                <li><b>NF-PERF-02 – Škálovatelnost:</b> horizontální škálování bez degradace výkonu.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Dostupnost a obnova</h3>
+            <ul>
+                <li><b>NF-AV-01 – Dostupnost:</b> 99.5 % za měsíc.</li>
+                <li><b>NF-REC-01 – Obnova:</b> obnova z poslední zálohy do 2 hodin.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Bezpečnost a GDPR</h3>
+            <ul>
+                <li><b>NF-SEC-01 – Šifrování:</b> TLS pro přenos, AES-256 pro uložení.</li>
+                <li><b>NF-SEC-02 – Autentizace:</b> RBAC, silné heslo, reset hesla.</li>
+                <li><b>NF-PRIV-01 – GDPR:</b> auditovatelné mazání osobních údajů.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Údržba a provoz</h3>
+            <ul>
+                <li><b>NF-MNT-01 – Monitoring:</b> metriky výkonu, chyby, bezpečnost; logy 90 dní.</li>
+                <li><b>NF-MNT-02 – CI/CD:</b> automatizované buildy a rollback.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Uživatelská použitelnost</h3>
+            <ul>
+                <li><b>NF-UX-01 – Přístupnost:</b> WCAG 2.1 AA pro klíčové stránky.</li>
+                <li><b>NF-LOC-01 – Lokalizace:</b> podpora CZ/EN.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Zálohování a retenční politika</h3>
+            <ul>
+                <li><b>NF-BKP-01 – Zálohy:</b> denní zálohy, retenční politika 30 dní.</li>
+                <li><b>NF-Retention-01 – Retence:</b> definice doby uchovávání a anonymizace.</li>
+            </ul>
+        </section>
+
+        <details>
+            <summary><b>Diagram nefunkčních požadavků</b></summary>
+            <a href="diagramDetails.html?target=diagrams/use_case_nonfunctional_requirements.svg"><img src="./diagrams/use_case_nonfunctional_requirements.svg" alt="Nefunkční požadavky - Diagram" style="width:70%; height:auto;"></a>
+        </details>
+    </article>
+
+    <article class="articl">
+        <header>
+            <h2>Funkční požadavky</h2>
+        </header>
+
+        <section>
+            <h3>Obecné zásady</h3>
+            <ul>
+                <li><b>Autentizace:</b> systém podporuje registraci a přihlášení pro role Student, Firma a Administrátor.</li>
+                <li><b>Validace:</b> vstupy z formulářů jsou validovány (povinná pole, velikost nahrávek, formát e-mailu).</li>
+                <li><b>Bezpečnost:</b> citlivá data (CV, e-mail) jsou uložena šifrovaně.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Studenti (F-ST)</h3>
+            <ul>
+                <li><b>F-ST-01 – Vytvoření a úprava profilu (Must have):</b> jméno, škola, obor, dovednosti, jazyky, dostupnost, krátké bio.</li>
+                <li><b>F-ST-02 – Nahrání životopisu (Must have):</b> PDF do 10 MB, náhled/miniatura.</li>
+                <li><b>F-ST-03 – Vyhledávání nabídek (Must have):</b> fulltext podle nadpisu, popisu a klíčových slov.</li>
+                <li><b>F-ST-04 – Filtrace nabídek (Must have):</b> lokalita, typ, odměna, obor, home office, vzdálenost, zkušenosti.</li>
+                <li><b>F-ST-05 – Rychlá reakce (Must have):</b> tlačítko Odpovědět odešle profil + CV, možnost přidat zprávu.</li>
+                <li><b>F-ST-06 – Přehled reakcí (Should have):</b> historie reakcí se stavem a možností zrušení.</li>
+                <li><b>F-ST-07 – Uložené vyhledávání (Should have):</b> ukládání dotazů a e-mailová upozornění na nové nabídky.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Firmy (F-FI)</h3>
+            <ul>
+                <li><b>F-FI-01 – Registrace a profil (Must have):</b> název, IČ, logo, web, popis, adresa; schválení administrátorem.</li>
+                <li><b>F-FI-02 – Tvorba a správa inzerátů (Must have):</b> název, obor, typ úvazku, odměna, lokalita, popis; koncept/publikace/archivace.</li>
+                <li><b>F-FI-03 – Správa uchazečů (Must have):</b> seznam reakcí, filtrace, stahování CV, zasílání zpráv.</li>
+                <li><b>F-FI-04 – Změna stavu uchazeče (Must have):</b> označení Pozváno/Přijat/Zamítnut, komentáře.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Komunikace (F-CH)</h3>
+            <ul>
+                <li><b>F-CH-01 – Chat (Must have):</b> 1:1 chat připojený k reakci na inzerát, historie dostupná oběma stranám.</li>
+                <li><b>F-CH-02 – Notifikace (Should have):</b> vizuální notifikace v UI a e-mail/push při důležitých událostech.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Administrace (F-AD)</h3>
+            <ul>
+                <li><b>F-AD-01 – Schvalování firem (Must have):</b> fronta firem k ověření, schválení/odmítnutí.</li>
+                <li><b>F-AD-02 – Moderace a správa účtů (Must have):</b> blokace, smazání, mazání inzerátů, auditní záznamy.</li>
+                <li><b>F-AD-03 – Statistiky (Should have):</b> dashboard a export CSV pro reporting.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Systém / Společné (F-SYS)</h3>
+            <ul>
+                <li><b>F-SYS-01 – Typ registrace (Must have):</b> rozlišení Student vs Firma a role-based přístupy.</li>
+                <li><b>F-SYS-02 – GDPR a mazání dat (Must have):</b> možnost smazat účet a osobní data, anonymizace dle zákonných lhůt.</li>
+                <li><b>F-SYS-03 – Limity a zálohy (Should have):</b> limity nahrávek, zálohy a logování.</li>
+            </ul>
+        </section>
+
+        <details>
+            <summary><b>Diagram funkčních požadavků</b></summary>
+            <a href="diagramDetails.html?target=diagrams/use_case_functional_requirements.svg"><img src="./diagrams/use_case_functional_requirements.svg" alt="Funkční požadavky - Use Case Diagram" style="width:70%; height:auto;"></a>
+        </details>
+    </article>
 </body>
 </html>

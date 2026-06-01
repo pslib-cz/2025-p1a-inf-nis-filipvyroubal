@@ -1,0 +1,53 @@
+@startuml usecase_nonfunctional_requirements
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle stick
+
+actor "Systém" as System
+
+package "Výkon & Škálovatelnost" {
+  usecase "Odezva < 2s" as NF1
+  usecase "Horizontální škálování" as NF2
+}
+
+package "Dostupnost & Obnova" {
+  usecase "Dostupnost 99.5%" as NF3
+  usecase "Obnova z backupu < 2h" as NF4
+}
+
+package "Bezpečnost & GDPR" {
+  usecase "Šifrování dat" as NF5
+  usecase "RBAC a autentizace" as NF6
+  usecase "Auditní mazání dat" as NF7
+}
+
+package "Údržba & Monitoring" {
+  usecase "Monitoring a logování" as NF8
+  usecase "CI/CD a rollback" as NF9
+}
+
+package "Uživatelská použitelnost" {
+  usecase "WCAG 2.1 AA" as NF10
+  usecase "Lokalizace (CZ/EN)" as NF11
+}
+
+package "Zálohování & Retence" {
+  usecase "Denní zálohy" as NF12
+  usecase "Retenční politika" as NF13
+}
+
+System --> NF1
+System --> NF2
+System --> NF3
+System --> NF4
+System --> NF5
+System --> NF6
+System --> NF7
+System --> NF8
+System --> NF9
+System --> NF10
+System --> NF11
+System --> NF12
+System --> NF13
+
+@enduml

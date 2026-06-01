@@ -3,10 +3,10 @@ left to right direction
 skinparam packageStyle rectangle
 skinparam actorStyle stick
 
-actor Student
-actor Firma
+actor "Student" as AStudent
+actor "Firma" as AFirma
 actor "Administrátor" as Admin
-actor Systém
+actor "Systém" as ASystem
 
 package "Student" {
   usecase "Registrovat se jako student" as UC1
@@ -41,26 +41,26 @@ package "Systém" {
   usecase "Blokovat neschválené firmy" as UC21
 }
 
-Student --> UC1
-Student --> UC2
-Student --> UC3
-Student --> UC4
-Student --> UC5
-Student --> UC6
-Student --> UC7
-Student --> UC8
-Student --> UC9
-Firma --> UC10
-Firma --> UC11
-Firma --> UC12
-Firma --> UC13
-Firma --> UC14
-Firma --> UC15
-Firma --> UC16
+AStudent --> UC1
+AStudent --> UC2
+AStudent --> UC3
+AStudent --> UC4
+AStudent --> UC5
+AStudent --> UC6
+AStudent --> UC7
+AStudent --> UC8
+AStudent --> UC9
+AFirma --> UC10
+AFirma --> UC11
+AFirma --> UC12
+AFirma --> UC13
+AFirma --> UC14
+AFirma --> UC15
+AFirma --> UC16
 Admin --> UC17
 Admin --> UC18
 Admin --> UC19
 Admin --> UC20
-Systém --> UC21
+ASystem --> UC21
 
 @enduml

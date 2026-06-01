@@ -1,0 +1,66 @@
+@startuml usecase_diagram_new
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle stick
+
+actor Student
+actor Firma
+actor "Administrátor" as Admin
+actor Systém
+
+package "Student" {
+  usecase "Registrovat se jako student" as UC1
+  usecase "Vytvořit/aktualizovat profil" as UC2
+  usecase "Nahrát CV" as UC3
+  usecase "Vyhledat nabídky" as UC4
+  usecase "Filtrovat nabídky" as UC5
+  usecase "Reagovat na nabídku" as UC6
+  usecase "Zobrazit stav reakcí" as UC7
+  usecase "Komunikovat s firmou" as UC8
+  usecase "Vymazat účet (GDPR)" as UC9
+}
+
+package "Firma" {
+  usecase "Registrovat se jako firma" as UC10
+  usecase "Spravovat firemní profil" as UC11
+  usecase "Vytvářet a upravovat inzeráty" as UC12
+  usecase "Spravovat uchazeče" as UC13
+  usecase "Změnit stav uchazeče" as UC14
+  usecase "Stáhnout životopis" as UC15
+  usecase "Komunikovat se studenty" as UC16
+}
+
+package "Administrátor" {
+  usecase "Schvalovat firmy" as UC17
+  usecase "Spravovat uživatelské účty" as UC18
+  usecase "Moderovat nevhodný obsah" as UC19
+  usecase "Zobrazovat statistiky" as UC20
+}
+
+package "Systém" {
+  usecase "Blokovat neschválené firmy" as UC21
+}
+
+Student --> UC1
+Student --> UC2
+Student --> UC3
+Student --> UC4
+Student --> UC5
+Student --> UC6
+Student --> UC7
+Student --> UC8
+Student --> UC9
+Firma --> UC10
+Firma --> UC11
+Firma --> UC12
+Firma --> UC13
+Firma --> UC14
+Firma --> UC15
+Firma --> UC16
+Admin --> UC17
+Admin --> UC18
+Admin --> UC19
+Admin --> UC20
+Systém --> UC21
+
+@enduml

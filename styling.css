@@ -13,7 +13,7 @@ body {
 }
 .articl{
     background-color: #76fff4;
-    margin: 30px auto;
+    margin: 3% auto;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -24,7 +24,7 @@ ul {
 }
 details {
     display: block;
-    margin: 20px 2%;
+    margin: 20px 1%;
     background-color: #90ff7a;
     border-radius: 10px;
     text-align: center;

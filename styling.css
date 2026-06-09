@@ -11,6 +11,12 @@ body {
   margin: 0;
   padding: 20px;
 }
+.diagram-img {
+  width: 70%;
+  max-height: 60vh;
+  height: auto;
+  max-width: 100%;
+}
 .articl{
     background-color: #76fff4;
     margin: 3% auto;

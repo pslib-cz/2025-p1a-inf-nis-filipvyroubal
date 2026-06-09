@@ -51,17 +51,7 @@
     <details>
         <summary><b>Use Case Diagram</b></summary>
             <a href="diagramDetails.html?target=diagrams/role_diagram.svg"><img class="diagram-img" src="./diagrams/role_diagram.svg" alt="Role Diagram"></a>
-    </article>
-
-    <article class="articl">
-        <header>
-            <h2>Role Diagram</h2>
-        </header>
-        <p>Diagram rolí znázorňuje hlavní uživatelské role v systému a jejich odpovědnosti v kontextu celé platformy. Ukazuje, jak se student, firma, administrátor a systém vzájemně doplňují, kdo iniciuje určité akce a jak jsou jednotlivé procesy rozděleny mezi aktéry. Tento model je důležitý zejména pro pochopení autorizace, workflow práce s inzeráty, komunikace s uchazeči a celkové struktury správy aplikace.</p>
-        <details>
-            <summary><b>Ukázat role diagram</b></summary>
-            <a href="diagramDetails.html?target=diagrams/role_diagram.svg"><img class="diagram-img" src="./diagrams/role_diagram.svg" alt="Role Diagram"></a>
-        </details>
+    </details>
     </article>
 
     <article class="articl">
@@ -80,7 +70,38 @@
             <h2>Technologie a nasazení</h2>
         </header>
         <p>Popis technologického stacku a architektury nasazení aplikace poskytuje přehled o tom, jak jsou jednotlivé části systému realizovány v reálném prostředí. Diagram ukazuje rozmístění komponent v produkčním prostředí, vazby mezi frontendem, backendem, databází, autentizační vrstvou a hostingovým prostředím, a zároveň ilustruje, jak funguje provoz, zálohování, dostupnost a spolehlivost aplikace v praxi. Tento model je užitečný zejména pro pochopení technické infrastruktury a způsobu nasazení aplikace do provozu.</p>
-        <p>Více informací naleznete v <a href="Technology_Deployment.md">dokumentu Technologie a nasazení</a>.</p>
+        <h3>Technologie</h3>
+        <ul>
+            <li>Frontend: HTML, CSS, JavaScript (statická webová stránka, případně framework typu React/Vue pro budoucí rozšíření)</li>
+            <li>Backend: Node.js / Python / Java (záleží na výběru, API by mělo být REST nebo GraphQL)</li>
+            <li>Databáze: relační databáze (PostgreSQL / MySQL) pro ukládání studentů, firem, inzerátů, reakcí a chatů</li>
+            <li>Ukládání souborů: objektové úložiště nebo diskový filesystem pro CV soubory (S3 kompatibilní úložiště nebo cloud storage)</li>
+            <li>Autentizace: JWT / OAuth2 pro bezpečné přihlášení a role-based access control</li>
+            <li>Notifikace: e-mailová služba (SMTP, SendGrid, Mailgun) a případně push notifikace</li>
+        </ul>
+        <h3>Uživatelské rozhraní</h3>
+        <ul>
+            <li>Responzivní design pro desktop i mobil</li>
+            <li>Přístupnost a WCAG 2.1 AA jako součást nefunkčních požadavků</li>
+        </ul>
+        <h3>Nasazení</h3>
+        <ul>
+            <li>Reverzní proxy / load balancer: Nginx, HAProxy nebo cloudová služba</li>
+            <li>Aplikační servery: kontejnery (Docker) pro backend i frontend</li>
+            <li>Databáze: nasazení v clusteru nebo spravované DB službě</li>
+            <li>Zálohování: denní zálohy databáze a záloha uložených souborů</li>
+            <li>Monitoring a logování: Prometheus/Grafana, ELK nebo cloudové monitorování</li>
+            <li>CI/CD: GitHub Actions / GitLab CI / Jenkins pro automatické testování a nasazení</li>
+        </ul>
+        <h3>Nasazovací scénář</h3>
+        <ol>
+            <li>Vývoj na lokálním počítači.</li>
+            <li>Push do repozitáře, spuštění CI pipeline.</li>
+            <li>Build a testy aplikace.</li>
+            <li>Deploy do staging prostředí.</li>
+            <li>Po ověření přepnutí do produkce.</li>
+        </ol>
+        <p>Tento článek slouží jako doplněk k diagramům a vysvětluje technologické volby a architekturu nasazení.</p>
         <details>
             <summary><b>Ukázat deployment diagram</b></summary>
             <a href="diagramDetails.html?target=diagrams/deployment_diagram.svg"><img class="diagram-img" src="./diagrams/deployment_diagram.svg" alt="Deployment Diagram"></a>

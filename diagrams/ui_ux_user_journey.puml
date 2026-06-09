@@ -1,0 +1,15 @@
+@startuml ui_ux_user_journey
+start
+:Registrace a přihlášení;
+:Vytvoření profilu a nahrání CV;
+:Vyhledávání nabídek;
+if (Byla nalezena vhodná nabídka?) then (ano)
+  :Detail inzerátu;
+  :Odeslání reakce;
+  :Komunikace přes chat;
+  :Sledování stavu přihlášky;
+else (ne)
+  :Změna filtrů a hledání znovu;
+endif
+stop
+@enduml

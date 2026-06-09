@@ -1,0 +1,27 @@
+@startuml ui_ux_wireframe_flow
+left to right direction
+actor Student
+actor Firma
+actor Administrátor
+
+rectangle "UI / UX rozhraní" {
+  usecase "Domovská stránka" as Home
+  usecase "Vyhledávání nabídek" as Search
+  usecase "Detail inzerátu" as Detail
+  usecase "Profil a CV" as Profile
+  usecase "Reakce a stav" as Application
+  usecase "Chat" as Chat
+  usecase "Admin panel" as AdminPanel
+}
+
+Student --> Home
+Student --> Search
+Student --> Detail
+Student --> Profile
+Student --> Application
+Student --> Chat
+Firma --> Detail
+Firma --> Application
+Firma --> Chat
+Administrátor --> AdminPanel
+@enduml

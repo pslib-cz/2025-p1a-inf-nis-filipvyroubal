@@ -36,8 +36,15 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload the site content only and exclude local artifacts / repo metadata
+          path: |
+            .
+            !.git
+            !.git/**
+            !.github
+            !.github/**
+            !.venv-1
+            !.venv-1/**
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
